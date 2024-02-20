@@ -1,0 +1,68 @@
+[tool.isort]
+multi_line_output = 5
+line_length = 120
+
+[tool.ruff]
+line-length = 120
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = ["E", "F"]
+# select: Specifies the linting rules to enable. In this case, it enables pycodestyle (E) and Pyflakes (F) rules by default.
+ignore = []
+# ignore: Specifies linting rules to ignore. None are ignored in this example.
+# Ex : Ignore the linting of files with names containing "test_"
+# Ex : ignore = ["test_.*"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+# Specifies rules that cannot be automatically fixed. None are unfixable in this example.
+fixable = ["ALL"]
+
+unfixable = []
+# unfixable: Specifies rules that cannot be automatically fixed. None are unfixable in this example.
+
+# Lists directories to be excluded from linting. These directories are commonly ignored and may contain third-party code or temporary files.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "migrations/",
+]
+
+[tool.mypy]
+exclude = ["venv"]
+
+per-file-ignores = {}
+# Allows specifying per-file linting ignores if needed. It's empty in this example.
+# Example:
+#   per-file-ignores = {
+#    "main.py": ["F401"],
+#}
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# dummy-variable-rgx: Defines a regular expression pattern for dummy variables,
+# which are typically underscore-prefixed.
+# This pattern allows unused variables when underscore-prefixed.
+
+# Assume Python 3.11
+target-version = "py311"
+
