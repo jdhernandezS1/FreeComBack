@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "http://localhost:8000",
+    "127.0.0.1",
 ]
 
 
