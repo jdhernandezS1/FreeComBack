@@ -1,3 +1,8 @@
 asgiref==3.7.2
+certifi==2024.2.2
+cloudinary==1.39.0
 Django==5.0.2
+ruff==0.2.2
+six==1.16.0
 sqlparse==0.4.4
+urllib3==2.2.1
